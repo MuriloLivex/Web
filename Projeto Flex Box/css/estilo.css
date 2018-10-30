@@ -1,52 +1,59 @@
 *{margin: 0; padding: 0;}
 
+/*imagem banner principal*/
 .banner{
-	background-image: url(../img/high.jpg);
+	background-image: url(../img/sexy.jpg);
 	width: 100%;
-	background-size: cover;
+	background-size: cover;	
+ 	filter: grayscale(0.5);  
 }
 
-.top{
-	background-color: #000;
+/*google fonts*/
+body{
+	font-family: 'Lato', sans-serif; 
+}
+
+/*header*/
+header{
+	background-color: #080808;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	display: box;
 	display: flex;
 	display: flexbox;
-	width: 100%;
 	height: auto;
-	}
-
-.logo{
-	display: 1;
-	flex: 1;
-	font-size: 40px;
-	padding: 18px;
-}
-.menu{
-	flex: 3px;
-	box-flex: 3px;
 }
 
-.menu ul{
+header img{
+	width: 200px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+header nav{
 	display: flex;
-	display: box;
-	display: flexbox; /* list-style: none;*/
 	margin-top: 30px;
-	box-orient: horizontal;
 	box-direction: row wrap;
 	flex-flow: row wrap;
 }
-.menu ul li{
-	box-flex: 1;
-	flex: 1;
-	text-align: center;
-}
-.menu ul li a{
+
+header li a{
 	color: #fff;
-	font-size: 30 px;
 	text-decoration: none;
 }
-.menu ul li a:hover{
+
+header li{
+	margin: 0 15px;
+}
+
+header li a:hover{
 	color: #de2c2c;
+}
+
+nav, ul{
+	list-style: none;
 }
 
 /*banner*/
@@ -63,6 +70,7 @@
 	width: 50%
 }
 .banner-texto-itens h2{
+	font-family: 'Playfair Display', serif;
 	font-size: 3em;
 	margin-bottom: 20px;
 	text-transform: uppercase;
@@ -72,6 +80,10 @@
 }
 
 /*principal*/
+.principal h2{
+	font-family: 'Playfair Display', serif;
+	margin-top: 30px;
+}
 
 .principal{
 	display: flex;
@@ -103,6 +115,7 @@
 }
 
 .contato-itens h2{
+	font-family: 'Playfair Display', serif;
 	color: #fff;
 	font-size: 40px;
 	margin-bottom: 18px;
@@ -133,51 +146,12 @@
 	text-transform: uppercase;
 }
 
-@media all and (max-width: 500px){
-	.top{
-		box-orient: vertical;
-		box-direction: normal;
-		flex-direction: column;
-		-ms-flex-direction: column;
-		text-align: center;
-	}
-
-	.logo{
-		padding: 18px 0 0;
-	}
-
-	.menu ul{
-		box-orient: vertical;
-		box-direction: normal;
-		flex-direction: column;
-		-ms-flex-direction: column;
-		margin-top: 0;
-	}
-
-	.menu ul li{
-		padding: 5px;
-	}
-
-	.banner-texto-itens{
-		width: 100%;
-	}
-
-	.banner-texto-itens h2{
-		font-size: 2.5em;
-	}
-
-	.principal{
-		box-orient: vertical;
-		box-direction: normal;
-		flex-direction: column;
-	}
-}
-
+/*footer*/
 footer{
 	text-align: center;
 	color: #fff;
 	padding: 30px;
-	background-color: #c4c4c4;
+	background-color: #b2b2b2;
 }
 
 footer a{ 
@@ -188,3 +162,11 @@ footer a{
 footer a:hover{
 	color:#da4b29;
 }
+@media{max-width: 700px}{
+	header{flex-direction: column;}
+	header img{margin-bottom: 15px;}
+	.principal {
+		flex-direction: column;
+	}
+}
+
