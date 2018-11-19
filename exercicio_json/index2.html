@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Carregando dados com JSON</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- AQUI SEUS CÓDIGOS JAVASCRIPT -->
+	<script src="dados.json"></script>
+
+	<script>
+
+		$(document).ready(function () {
+			for(i=0; i<menu.length; i++){
+					$("#menu").append('<li><a href="'+menu[i].link+'">'+menu[i].desc+'</a></li>');
+				}
+		})
+	</script>
+		<script>
+		$(document).ready(function () {
+			for(i=0; i<dados.length; i++){
+			var txt = "<div class =\"item\">";
+			txt += "<h3>"+dados[i].titulo+"</h3>";
+			txt += "<p>"+dados[i].descricao+"</p>";
+			txt += "<img>"+dados[i].imagem+"<img>";
+			txt += "<p>"+dados[i].data+"<p>";
+			txt += "</div>";
+			$('#principal').append(txt);
+				}
+		})
+	</script>
+</head>
+<body>
+	<header>menu
+		<h2>Carregando dados com requisição jQuery</h2>
+		<nav>
+			
+			<ul id="menu">
+				
+			</ul>
+
+		</nav>
+
+	</header>
+	<main>
+		<h3>Lista de Itens</h3>
+		<div id="principal">
+			<h1>kkkkkkkkkkk</h1>
+
+		</div>
+	</main>
+	<footer>
+		<p>Desenvolvido em sala</p>
+	</footer>
+</body>
+</html>
